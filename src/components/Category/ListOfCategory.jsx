@@ -12,7 +12,7 @@ const ListOfCategory = () => {
       <h1 className="bg-pink-600 p-2 rounded-lg w-fit">
         <span className="font-bold">Total food:</span> {meals.length}
       </h1>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 container mx-auto">
         {meals.map((meal) => (
           <div key={meal.idMeal} className="shadow-xl rounded-lg border p-3">
               <div className="flex items-center gap-4">
@@ -24,7 +24,7 @@ const ListOfCategory = () => {
                 <h2 className="text-xl font-bold">{meal.strMeal}</h2>
               </div>
               <Link to={`/mealsDetail/${meal.idMeal}`}>
-                <button className="btn btn-neutral mt-5">See Details</button>
+                <button className="btn btn-outline mt-5">See Details</button>
               </Link>
           </div>
         ))}
